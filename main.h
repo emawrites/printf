@@ -23,9 +23,9 @@ typedef struct sign
 } sign_t;
 
 /**
- * struct sign - struct indicating which sign to switch
+ * struct printSign - struct indicating which sign to switch
  * when a specifier is passed to the _printf function
- * @s: specifies format.
+ * @c: specifies format.
  * @f: pointer to print function.
  */
 
