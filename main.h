@@ -32,7 +32,7 @@ typedef struct sign
 typedef struct printSign
 {
 	char c;
-	int (*f)(va_list args, sign_t *f);
+	int (*f)(va_list ap, sign_t *f);
 } ps;
 
 	int _printf(const char *format, ...);
