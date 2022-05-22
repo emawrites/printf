@@ -25,10 +25,10 @@ int print_bigS(va_list ap, sign_t *f)
 			count += 2;
 			res = convert(s[i], 16, 0);
 
-																			if (!res[1])
+			if (!res[1])
 				count += _putchar('0');
 																			count += _puts(res);
-																		}
+		}
 		else
 			count += _putchar(s[i]);
 	}
@@ -98,7 +98,7 @@ int print_rot13(va_list ap, sign_t *f)
  * @f: pointer to the struct flags in which we turn the flags on
  * Return: number of char printed
  */
-int print_percent(va_list ap, flags_t *f)
+int print_percent(va_list ap, sign_t *f)
 {
 	(void)ap;
 	(void)f;

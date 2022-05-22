@@ -26,6 +26,7 @@ int (*get_print(char s))(va_list, sign_t *)
 		};
 
 		int n_flags = 14;
+
 		register int i;
 
 		for (i = 0; i < n_flags; i++)

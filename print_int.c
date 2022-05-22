@@ -28,7 +28,7 @@ int print_int(va_list ap, sign_t *f)
 
 /**
  * print_unsigned - a function used to unsigned integer inputs
- * @arg_lis: list of command line arguments given to _printf
+ * @ap: list of command line arguments given to _printf
  * @f: pointer to the struct of flags
  * Return: the number of characters printed
  */

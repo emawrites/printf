@@ -11,6 +11,7 @@ int print_address(va_list ap, sign_t *f)
 {
 	char *str;
 	unsigned long int p = va_arg(ap, unsigned long int);
+
 	register int count = 0;
 
 	(void)f;
