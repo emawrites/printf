@@ -9,26 +9,26 @@
 int (*get_print(char s))(va_list, sign_t *)
 {
 	ps f_array[] = {
-		{'i', p_int},
-		{'s', p_string},
-		{'c', p_char},
-		{'d', p_int},
-		{'u', p_unsigned},
-		{'x', p_hex},
-		{'X', p_hex_cap},
-		{'b', p_bin},
-		{'o', p_oct},
-		{'R', p_rot13},
-		{'r', p_rev},
-		{'S', p_capS},
-		{'p', p_address},
-		{'%', p_percent}
+		{'i', print_int},
+		{'s', print_string},
+		{'c', print_char},
+		{'d', print_int},
+		{'u', print_unsigned},
+		{'x', print_hex},
+		{'X', print_hex_big},
+		{'b', print_binary},
+		{'o', print_octal},
+		{'R', print_rot13},
+		{'r', print_rev},
+		{'S', print_bigS},
+		{'p', print_address},
+		{'%', print_percent}
 		};
 
-		int flags = 14;
+		int n_flags = 14;
 		register int i;
 
-		for (i = 0; i < flags; i++)
+		for (i = 0; i < n_flags; i++)
 			if (f_array[i].c == s)
 				return (f_array[i].f);
 			return (NULL);
