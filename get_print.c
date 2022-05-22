@@ -31,5 +31,5 @@ int (*get_print(char s))(va_list, sign_t *)
 		for (i = 0; i < n_flags; i++)
 			if (f_array[i].c == s)
 				return (f_array[i].f);
-			return (NULL);
+		return (NULL);
 }
