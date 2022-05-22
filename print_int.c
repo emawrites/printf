@@ -2,14 +2,14 @@
 
 /**
  * print_int - a function used to print integer inputs
- * @arg_list: list of command line arguments given to _printf
+ * @ap: list of command line arguments given to _printf
  * @f: pointer to the struct of flags
  * Return: the number of characters printed
  */
 
-int print_int(va_list arg_list, sign_t *f)
+int print_int(va_list ap, sign_t *f)
 {
-	int n = va_arg(arg_list, int);
+	int n = va_arg(ap, int);
 	int int_dgts = count_digit(n);
 
 	if (f->space == 1 && f->plus == 0 && n >= 0)
@@ -32,9 +32,9 @@ int print_int(va_list arg_list, sign_t *f)
  * @f: pointer to the struct of flags
  * Return: the number of characters printed
  */
-int print_unsigned(va_list arg_list, sign_t *f)
+int print_unsigned(va_list ap, sign_t *f)
 {
-	unsigned int u = va_arg(arg_list, unsigned int);
+	unsigned int u = va_arg(ap, unsigned int);
 	char *str = convert(u, 10, 0);
 
 	(void)f;
