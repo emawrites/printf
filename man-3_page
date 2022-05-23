@@ -1,0 +1,80 @@
+.\" Man 3 page for _printf function
+.TH man_3_printf "May  23, 2022" "version 0.01" 
+.SH NAME
+.B _printf
+- Creation of the printf function 
+
+.SH SYNOPSIS
+This is a project at ALX SE Program, adapted from Holberton School \
+It does the work that the printf function in C does.
+_printf FORMAT [ARGUMENT]...
+.ss
+
+.SH DESCRIPTION
+
+_printf() the function produces output according to format string that \
+specifies how subsequent arguments are written and converted to stdout, the \
+standard output stream.
+
+_printf() will loop through the format for a conversion specifier (%). If found\
+, it will access an array of structures and match the corresponding character \
+with the given function. The specified function will return a string-converted \
+version of the result and immediately passed into the buffer.
+
+.SH CONVERSION SPECIFIERS
+A character that specifies the type of conversion to be applied. \
+The conversion specifiers and their meanings are:
+d, i: The int argument is converted to signed decimal notation.	
+c: character
+e: Scientific notation (mantissa/exponent) using e character.
+E: Scientific notation (mantissa/exponent) using E character.
+%: A '%' is written.  No argument is converted.  The complete \
+conversion specification is '%%'.
+m: Print output of strerror(errno).  No argument is required.
+p: pointer address.
+n: nothing printed.
+s: string of characters.
+
+.SH FORMAT
+controls the output as in C printf.  Interpreted sequences are:
+
+       \n     new line
+
+       \t     tab
+
+       %%     a single %
+
+.SS Example
+.RS
+#include <stdio.h>
+
+int main () {
+   int ch;
+
+   for( ch = 75 ; ch <= 100; ch++ ) {
+      printf("ASCII value = %d, Character = %c\n", ch , ch );
+   }
+
+   return(0);
+}
+
+.RE
+
+.SS Return Value
+Upon success, the above program will produce the ASCII value and its \
+corresponding character.
+
+.SH "SEE ALSO"
+.SH ""
+
+.BR printf(1)
+
+.P
+
+.SH BUGS
+callers must be careful not to overflow the actual space;this is often \
+impossible to assure.  Note that the length of the strings produced is \
+locale-dependent and difficult to predict.
+
+.SH "AUTHOR"
+Emmanuel Iorkase and Adeseye Ogunsina.
